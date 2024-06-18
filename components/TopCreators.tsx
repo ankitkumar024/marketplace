@@ -22,7 +22,7 @@ const TopCreators = () => {
                     </button>
                 </div>
             </div>
-            <div className='topcreators-cards h-[640px] lg:h-full md:h-[400px] '>
+            <div className='topcreators-cards h-[640px] lg:h-full md:h-[400px] sm:-z-10'>
                 <HoverEffect
                     items={topCreators.map((creator, index) => ({
                         title: creator.name,

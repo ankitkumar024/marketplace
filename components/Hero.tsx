@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <HeroHighlight>
+        <HeroHighlight className='sm:-z-10'>
             <motion.h1
                 initial={{
                     opacity: 0,
