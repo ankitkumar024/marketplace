@@ -34,7 +34,7 @@ const TopCreators = () => {
                 />
             </div>
 
-            <div className='w-full items-center md:hidden pt-4'>
+            <div className='w-full items-center md:hidden pt-4 sm:z-10'>
                 <button className='flex w-full gap-4 p-4 items-center justify-center font-medium border-[2px] border-[#A259FF] rounded-full hover:bg-[#A259FF]'>
                     <img
                         src={getImagePath("/rocket.svg")}

@@ -28,7 +28,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      <div className={`flex-col w-[180px] absolute top-14 right-4 rounded-2xl bg-[#3B3B3B] md:flex-row md:flex ${isOpen ? 'flex' : 'hidden'} md:w-max md:items-center md:relative md:top-0 md:bg-transparent md:gap-1`}>
+      <div className={`flex-col sm:z-10 w-[180px] absolute top-14 right-4 rounded-2xl bg-[#3B3B3B] md:flex-row md:flex ${isOpen ? 'flex' : 'hidden'} md:w-max md:items-center md:relative md:top-0 md:bg-transparent md:gap-1`}>
         <ul className="flex flex-col md:flex-row md:items-center">
           {navItems.map((item) => (
             <li key={item.id} className='flex items-center w-auto justify-end p-2 md:ml-4 md:w-max hover:text-[#858584]'>
