@@ -1,11 +1,8 @@
-"use client";
-
 import React from 'react';
 import { getImagePath } from '@/data/helpers';
 import { topCreators } from '@/data';
-import { HoverEffect } from "./ui/card-hover-effect";
+import { HoverEffect } from './ui/card-hover-effect';
 import Image from 'next/image';
-
 
 const TopCreators = () => {
     return (
@@ -17,7 +14,12 @@ const TopCreators = () => {
                 </div>
                 <div className='w-auto items-center hidden md:flex'>
                     <button className='flex gap-4 p-4 w-[300px] items-center justify-center font-medium border-[2px] border-[#A259FF] rounded-full hover:bg-[#A259FF]'>
-                        <img src={getImagePath("/rocket.svg")} alt="rocket" />
+                        <Image
+                            src={getImagePath("/rocket.svg")}
+                            alt="rocket"
+                            width={20}
+                            height={20}
+                        />
                         View Rankings
                     </button>
                 </div>
@@ -28,7 +30,7 @@ const TopCreators = () => {
                         title: creator.name,
                         description: `Total Sales: 34.53 ETH`,
                         name: creator.name,
-                        img: creator.img,
+                        Image: creator.img,
                         number: index + 1,
                     }))}
                 />
@@ -36,11 +38,15 @@ const TopCreators = () => {
 
             <div className='w-full items-center md:hidden pt-4'>
                 <button className='flex w-full gap-4 p-4 items-center justify-center font-medium border-[2px] border-[#A259FF] rounded-full hover:bg-[#A259FF]'>
-                    <img src={getImagePath("/rocket.svg")} alt="rocket" />
+                    <Image
+                        src={getImagePath("/rocket.svg")}
+                        alt="rocket"
+                        width={20}
+                        height={20}
+                    />
                     View Rankings
                 </button>
             </div>
-
         </div>
     );
 };

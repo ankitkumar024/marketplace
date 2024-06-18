@@ -5,14 +5,13 @@ import { getImagePath } from '@/data/helpers'
 import React from 'react'
 import Image from 'next/image';
 
-
 const Footer = () => {
     return (
-        <div className='footer bg-black w-max-[1800px] mt-[4rem] lg:w-auto'>
+        <div className='footer bg-black w-full mt-[4rem] lg:w-auto'>
             <div className='ml-10 pt-5 pr-5 w-auto flex flex-col gap-4 lg:flex-row lg:justify-between '>
                 <div className='w-max flex flex-col gap-4'>
                     <div className='flex items-center gap-4'>
-                        <img src={getImagePath("/logo.png")} alt="logo" />
+                        <Image src={getImagePath("/logo.png")} alt="logo" width={25} height={25} />
                         <h1 className='text-[20px] font-bold md:text-[30px] w-max'>NFT Marketplace</h1>
                     </div>
 
@@ -22,7 +21,7 @@ const Footer = () => {
                         <div className='flex gap-2'>
                             {SocialLinks.map((items) => (
                                 <div key={items.id} className='cursor-pointer'>
-                                    <img src={items.logo} alt="logo" onClick={() => window.location.href = items.link} />
+                                    <Image src={items.logo} alt="logo" width={24} height={24} onClick={() => window.location.href = items.link} />
                                 </div>
                             ))}
                         </div>
@@ -58,7 +57,7 @@ const Footer = () => {
                     <div className='join flex flex-col gap-4 w-full p-4 lg:flex-row lg:gap-0'>
                         <input className='border-[2px] p-4 items-center justify-center rounded-3xl text-black bg-white lg:w-auto lg:text-[15px]' type="text" placeholder='Enter Your Email Address' />
                         <button className='flex w-full gap-4 p-4 items-center justify-center font-medium bg-[#A259FF] rounded-3xl lg:relative lg:right-[39px] '>
-                            <img src={getImagePath("/mail.svg")} alt="mail" className='cursor-pointer' />
+                            <Image src={getImagePath("/mail.svg")} alt="mail" width={20} height={20} className='cursor-pointer' />
                             Subscribe
                         </button>
                     </div>
@@ -72,4 +71,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default Footer;
