@@ -15,11 +15,9 @@ const TrendingCollection = () => {
                     <div key={items.id} className={`flex flex-col w-full gap-4 ${index > 0 ? 'hidden md:flex' : ''} md:${index > 1 ? 'hidden lg:flex' : ""}`}>
                         {/* Main Image */}
                         <div style={{ width: '100%', height: '300px' }} className="relative">
-                            <Image
+                            <img
                                 src={items.img}
                                 alt="main image"
-                                layout="fill"
-                                objectFit="cover"
                                 className="rounded-xl"
                             />
                         </div>
@@ -27,21 +25,17 @@ const TrendingCollection = () => {
                         <div className='flex justify-between gap-4'>
                             {/* Image 1 */}
                             <div style={{ width: '150px', height: '150px' }} className="relative">
-                                <Image
+                                <img
                                     src={items.image}
                                     alt=""
-                                    layout="fill"
-                                    objectFit="cover"
                                     className="rounded-xl"
                                 />
                             </div>
                             {/* Image 2 */}
                             <div style={{ width: '150px', height: '150px' }} className="relative">
-                                <Image
+                                <img
                                     src={items.image1}
                                     alt=""
-                                    layout="fill"
-                                    objectFit="cover"
                                     className="rounded-xl"
                                 />
                             </div>
@@ -53,11 +47,9 @@ const TrendingCollection = () => {
                             <h2 className='font-semibold text-[18px]'>{items.title}</h2>
                             <div className='placeholder flex items-center gap-3'>
                                 <div style={{ width: '30px', height: '30px' }} className="relative">
-                                    <Image
+                                    <img
                                         src={items.placeholderImg}
                                         alt=""
-                                        layout="fill"
-                                        objectFit="cover"
                                         className="rounded-full"
                                     />
                                 </div>

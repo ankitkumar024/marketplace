@@ -14,12 +14,9 @@ const HowItWorks = () => {
                 {howitworks.map((item) => (
                     <div key={item.id} className='w-full flex flex-col items-center bg-black rounded-xl p-5 gap-6'>
                         <div className='relative w-[100%] h-[100%] md:w-[100%] md:h-[100%]'>
-                            <Image
+                            <img
                                 src={item.img}
                                 alt={item.title}
-                                layout="responsive"
-                                width={300}
-                                height={200}
                                 className='rounded-xl'
                             />
                         </div>

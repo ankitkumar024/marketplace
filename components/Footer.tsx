@@ -11,7 +11,7 @@ const Footer = () => {
             <div className='ml-10 pt-5 pr-5 w-auto flex flex-col gap-4 lg:flex-row lg:justify-between '>
                 <div className='w-max flex flex-col gap-4'>
                     <div className='flex items-center gap-4'>
-                        <Image src={getImagePath("/logo.png")} alt="logo" width={25} height={25} />
+                        <img src={getImagePath("/logo.png")} alt="logo" />
                         <h1 className='text-[20px] font-bold md:text-[30px] w-max'>NFT Marketplace</h1>
                     </div>
 
@@ -21,7 +21,7 @@ const Footer = () => {
                         <div className='flex gap-2'>
                             {SocialLinks.map((items) => (
                                 <div key={items.id} className='cursor-pointer'>
-                                    <Image src={items.logo} alt="logo" width={24} height={24} onClick={() => window.location.href = items.link} />
+                                    <img src={items.logo} alt="logo"  onClick={() => window.location.href = items.link} />
                                 </div>
                             ))}
                         </div>
@@ -57,7 +57,7 @@ const Footer = () => {
                     <div className='join flex flex-col gap-4 w-full p-4 lg:flex-row lg:gap-0'>
                         <input className='border-[2px] p-4 items-center justify-center rounded-3xl text-black bg-white lg:w-auto lg:text-[15px]' type="text" placeholder='Enter Your Email Address' />
                         <button className='flex w-full gap-4 p-4 items-center justify-center font-medium bg-[#A259FF] rounded-3xl lg:relative lg:right-[39px] '>
-                            <Image src={getImagePath("/mail.svg")} alt="mail" width={20} height={20} className='cursor-pointer' />
+                            <img src={getImagePath("/mail.svg")} alt="mail" className='cursor-pointer' />
                             Subscribe
                         </button>
                     </div>

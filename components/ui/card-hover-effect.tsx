@@ -14,7 +14,7 @@ export const HoverEffect = ({
         title: string;
         description: string;
         name: string;
-        Image: string;
+        img: string;
         number: number;
     }[];
     className?: string;
@@ -54,11 +54,9 @@ export const HoverEffect = ({
                     </AnimatePresence>
                     <Card className={`${idx > 4 ? 'hidden md:flex' : ''} md:${idx > 5 ? 'hidden lg:flex' : ''} lg:flex-col`}>
                         <div className="p-4 flex items-center gap-8 lg:flex-col">
-                            <Image
-                                src={item.Image}
+                            <img
+                                src={item.img}
                                 alt={item.title}
-                                width={40}
-                                height={40}
                                 className="w-[40px] h-[40px] lg:w-[100px] lg:h-[100px] object-cover rounded-2xl"
                             />
                             <div className="flex flex-col items-start lg:items-center">

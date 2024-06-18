@@ -14,11 +14,9 @@ const TopCreators = () => {
                 </div>
                 <div className='w-auto items-center hidden md:flex'>
                     <button className='flex gap-4 p-4 w-[300px] items-center justify-center font-medium border-[2px] border-[#A259FF] rounded-full hover:bg-[#A259FF]'>
-                        <Image
+                        <img
                             src={getImagePath("/rocket.svg")}
                             alt="rocket"
-                            width={20}
-                            height={20}
                         />
                         View Rankings
                     </button>
@@ -30,7 +28,7 @@ const TopCreators = () => {
                         title: creator.name,
                         description: `Total Sales: 34.53 ETH`,
                         name: creator.name,
-                        Image: creator.img,
+                        img: creator.img,
                         number: index + 1,
                     }))}
                 />
@@ -38,11 +36,9 @@ const TopCreators = () => {
 
             <div className='w-full items-center md:hidden pt-4'>
                 <button className='flex w-full gap-4 p-4 items-center justify-center font-medium border-[2px] border-[#A259FF] rounded-full hover:bg-[#A259FF]'>
-                    <Image
+                    <img
                         src={getImagePath("/rocket.svg")}
                         alt="rocket"
-                        width={20}
-                        height={20}
                     />
                     View Rankings
                 </button>

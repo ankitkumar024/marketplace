@@ -14,7 +14,7 @@ const DiscoverNFT = () => {
 
                 <div className='w-auto items-center hidden md:flex'>
                     <button className='flex gap-4 p-4 w-[300px] items-center justify-center font-medium border-[2px] border-[#A259FF] rounded-full hover:bg-[#A259FF]'>
-                        <Image src={getImagePath("/eye.svg")} alt="eye" width={24} height={24} />
+                        <img src={getImagePath("/eye.svg")} alt="eye" />
                         See All
                     </button>
                 </div>
@@ -24,18 +24,16 @@ const DiscoverNFT = () => {
                 {discoverNFTS.map((items) => (
                     <div key={items.id} className='bg-black rounded-3xl w-full'>
                         <div className='relative w-full h-0 pb-[75%]'>
-                            <Image
+                            <img
                                 src={items.img}
                                 alt={items.title}
-                                layout='fill'
-                                objectFit='cover'
                                 className='rounded-t-3xl'
                             />
                         </div>
                         <h1 className='text-[18px] font-semibold p-4 md:pt-8 md:pb-8'>{items.title}</h1>
 
                         <div className='pl-4 pt-1 flex gap-3'>
-                            <Image src={items.img1} alt={items.name} width={40} height={40} className='rounded-full' />
+                            <img src={items.img1} alt={items.name} className='rounded-full' />
                             <p className='font-light'>{items.name}</p>
                         </div>
 
@@ -53,7 +51,7 @@ const DiscoverNFT = () => {
 
             <div className='w-full items-center md:hidden pt-4'>
                 <button className='flex w-full gap-4 p-4 items-center justify-center font-medium border-[2px] border-[#A259FF] rounded-full hover:bg-[#A259FF]'>
-                    <Image src={getImagePath("/eye.svg")} alt="eye" width={24} height={24} />
+                    <img src={getImagePath("/eye.svg")} alt="eye" />
                     See All
                 </button>
             </div>

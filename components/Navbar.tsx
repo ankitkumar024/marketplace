@@ -5,6 +5,7 @@ import { getImagePath } from '@/data/helpers';
 import Image from 'next/image';
 import { navItems } from '@/data';
 
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,7 +17,7 @@ const Navbar = () => {
     <nav className='relative flex w-max md:gap-[70px] md:justify-between lg:w-full'>
       <div className='flex justify-between items-center p-4 gap-[10rem]'>
         <div className='flex items-center gap-2'>
-          <Image className='w-[25px]' src="/logo.png" width={25} height={25} alt="logo" />
+          <img className='w-[25px]' src={getImagePath("/logo.png")} alt="logo" />
           <h1 className='md:text-[18px]'>NFT Marketplace</h1>
         </div>
         <button
@@ -34,14 +35,14 @@ const Navbar = () => {
               <a className='cursor-pointer text-[14px] md:w-max md:text-[12px] lg:text-[18px]' href={`#${item.id}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                  document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })
                 }}>{item.name}</a>
             </li>
           ))}
         </ul>
         <div className='flex items-center w-full pl-[4.7rem] pb-4 md:p-0'>
           <button className='flex gap-2 cursor-pointer text-[12px] items-center bg-[#A259FF] p-3 rounded-2xl lg:text-[18px]'>
-            <Image className='w-[13px] lg:w-[20px]' src={getImagePath("/user.svg")} width={20} height={20} alt="User Icon" />Sign Up
+            <img className='w-[13px] lg:w-[20px]' src={getImagePath("/user.svg")} alt="User Icon" />Sign Up
           </button>
         </div>
       </div>
